@@ -1365,20 +1365,22 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            // Counter
-            if (entry.target.id === 'hero') {
-                setTimeout(() => {
-                    countUp(document.getElementById('stat1'), 1240, '+', false);
-                    countUp(document.getElementById('stat2'), 35, '+', false);
-                    countUp(document.getElementById('stat3'), 3800, '+', false);
-                    countUp(document.getElementById('stat4'), 4.8, '', true);
-                }, 500);
-            }
+
         }
     });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('.fade-in, #hero').forEach(el => observer.observe(el));
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+// カウントアップはページロード後に直接実行
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        countUp(document.getElementById("stat1"), 1240, "+", false);
+        countUp(document.getElementById("stat2"), 35, "+", false);
+        countUp(document.getElementById("stat3"), 3800, "+", false);
+        countUp(document.getElementById("stat4"), 4.8, "", true);
+    }, 800);
+});
 
 // ===== SEARCH TAB =====
 function switchSearchTab(type) {
