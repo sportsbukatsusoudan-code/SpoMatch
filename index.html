@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
     <title>スポーツ・部活相談サポート | メンター・審判・トレーナー総合マッチング</title>
     <meta name="description" content="スポーツ・部活相談サポートは、メンター・審判・トレーナーをワンストップでマッチングする日本初のスポーツ人材総合プラットフォームです。部活動の地域移行を支援します。">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -93,9 +95,8 @@
         .hero-bg {
             position:absolute; inset:0;
             background:
-                radial-gradient(ellipse at 15% 50%, rgba(26,115,232,0.15) 0%, transparent 60%),
-                radial-gradient(ellipse at 85% 20%, rgba(255,107,53,0.12) 0%, transparent 55%),
-                radial-gradient(ellipse at 60% 85%, rgba(0,200,83,0.08) 0%, transparent 50%);
+                linear-gradient(rgba(10,22,40,0.65), rgba(10,22,40,0.65)),
+                url('assets/images/hero-bg.jpg') center/cover no-repeat;
         }
         .hero-particles { position:absolute; inset:0; overflow:hidden; }
         .particle {
@@ -605,11 +606,7 @@
 <header class="header" id="header">
     <div class="header-inner">
         <div class="logo" onclick="scrollTo('hero')">
-            <div class="logo-icon">部サポ</div>
-            <div>
-                <div class="logo-text">スポーツ・部活相談サポート</div>
-                <div class="logo-sub">スポーツ人材マッチング</div>
-            </div>
+            <img src="assets/images/logo.png" alt="SpoMatch" style="height:44px;width:auto;display:block;">
         </div>
         <nav class="nav" id="nav">
             <a onclick="scrollTo('services')">サービス</a>
@@ -687,6 +684,7 @@
     </div>
     <div class="services-grid">
         <div class="service-card sc-mentor fade-in" onclick="scrollTo('search')">
+            <img src="assets/images/service-mentor.jpg" alt="メンターマッチング" style="width:100%;height:180px;object-fit:cover;border-radius:16px 16px 0 0;">
             <div class="sc-head">
                 <div class="sc-icon"><i class="fas fa-graduation-cap"></i></div>
                 <h3>メンターマッチング</h3>
@@ -707,6 +705,7 @@
         </div>
 
         <div class="service-card sc-referee fade-in" onclick="scrollTo('search')">
+            <img src="assets/images/service-referee.jpg" alt="審判派遣" style="width:100%;height:180px;object-fit:cover;border-radius:16px 16px 0 0;">
             <div class="sc-head">
                 <div class="sc-icon"><i class="fas fa-flag"></i></div>
                 <h3>審判派遣</h3>
@@ -727,6 +726,7 @@
         </div>
 
         <div class="service-card sc-trainer fade-in" onclick="scrollTo('search')">
+            <img src="assets/images/service-trainer.jpg" alt="トレーナー派遣" style="width:100%;height:180px;object-fit:cover;border-radius:16px 16px 0 0;">
             <div class="sc-head">
                 <div class="sc-icon"><i class="fas fa-heartbeat"></i></div>
                 <h3>トレーナー派遣</h3>
