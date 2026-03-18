@@ -1579,8 +1579,8 @@ function showToast(msg) {
 // ========== EMAILJS設定 ==========
 // 以下3つの値をEmailJS(https://www.emailjs.com)で取得した値に変更してください
 const EMAILJS_PUBLIC_KEY  = "Ec4dkdUV5P4aUrf1t";   // Account > API Keys
-const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";   // Email Services の Service ID
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  // Email Templates の Template ID
+const EMAILJS_SERVICE_ID  = "service_jln7gjq";   // Email Services の Service ID
+const EMAILJS_TEMPLATE_ID = "template_tpmimq3";  // Email Templates の Template ID
 
 (function(){
     if (EMAILJS_PUBLIC_KEY) {
@@ -1613,11 +1613,15 @@ function sendContact() {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
 
     emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        name:         name,
         from_name:    name,
+        email:        email,
         reply_to:     email,
         phone:        phone || '未入力',
+        title:        type,
         inquiry_type: type,
-        message:      msg
+        message:      '[種別] ' + type + '\n[電話] ' + (phone || '未入力') + '\n\n' + msg,
+        time:         new Date().toLocaleString('ja-JP')
     }).then(function() {
         document.getElementById('contactFormWrap').style.display = 'none';
         document.getElementById('contactDone').style.display = 'block';
