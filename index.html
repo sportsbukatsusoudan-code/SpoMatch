@@ -616,6 +616,7 @@
             <a onclick="scrollTo('search')">人材を探す</a>
             <a onclick="scrollTo('pricing')">料金</a>
             <a onclick="scrollTo('faq')">FAQ</a>
+            <a onclick="scrollTo('contact')">お問い合わせ</a>
             <a class="btn-login" onclick="showToast('ログイン機能は準備中です')">ログイン</a>
             <a class="btn-register" onclick="scrollTo('register')">無料登録</a>
         </nav>
@@ -630,6 +631,7 @@
     <a onclick="scrollTo('search');toggleMobileNav()">人材を探す</a>
     <a onclick="scrollTo('pricing');toggleMobileNav()">料金</a>
     <a onclick="scrollTo('faq');toggleMobileNav()">FAQ</a>
+    <a onclick="scrollTo('contact');toggleMobileNav()">お問い合わせ</a>
     <a onclick="scrollTo('register');toggleMobileNav()">無料登録</a>
 </div>
 
@@ -1203,6 +1205,55 @@
     </div>
 </section>
 
+
+<!-- ===== CONTACT ===== -->
+<section class="register-section" id="contact" style="background:#fff;">
+    <div class="register-container">
+        <div class="section-header fade-in">
+            <div class="section-label"><i class="fas fa-envelope"></i> CONTACT</div>
+            <h2 class="section-title">お問い合わせ</h2>
+            <p class="section-sub">ご質問・ご依頼・法人向けのご相談など、お気軽にお問い合わせください</p>
+        </div>
+
+        <div class="reg-form active" id="contactFormWrap" style="display:block;">
+            <div class="form-row">
+                <div class="form-group"><label>お名前 <span style="color:red">*</span></label><input type="text" id="c_name" placeholder="山田 太郎"></div>
+                <div class="form-group"><label>メールアドレス <span style="color:red">*</span></label><input type="email" id="c_email" placeholder="example@email.com"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group"><label>電話番号</label><input type="tel" id="c_phone" placeholder="090-1234-5678"></div>
+                <div class="form-group">
+                    <label>お問い合わせ種別 <span style="color:red">*</span></label>
+                    <select id="c_type">
+                        <option value="">選択してください</option>
+                        <option>メンターマッチングについて</option>
+                        <option>審判派遣について</option>
+                        <option>トレーナー派遣について</option>
+                        <option>大会サポートパッケージについて</option>
+                        <option>法人・自治体での導入について</option>
+                        <option>人材として登録したい</option>
+                        <option>料金について</option>
+                        <option>その他</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row full">
+                <div class="form-group"><label>お問い合わせ内容 <span style="color:red">*</span></label><textarea id="c_msg" style="min-height:120px;" placeholder="お問い合わせ内容をご記入ください"></textarea></div>
+            </div>
+            <button class="btn-reg-submit" id="c_btn" onclick="sendContact()">
+                <i class="fas fa-paper-plane"></i> 送信する
+            </button>
+            <p style="text-align:center;font-size:12px;color:var(--gray-600);margin-top:10px;">通常2営業日以内にご返信いたします</p>
+        </div>
+
+        <div id="contactDone" style="display:none;text-align:center;padding:60px 20px;">
+            <i class="fas fa-check-circle" style="font-size:60px;color:#00c853;margin-bottom:18px;display:block;"></i>
+            <h3 style="font-size:22px;font-weight:900;margin-bottom:10px;">送信完了しました</h3>
+            <p style="color:var(--gray-600);">お問い合わせありがとうございます。<br>2営業日以内にご連絡いたします。</p>
+        </div>
+    </div>
+</section>
+
 <!-- ===== CTA ===== -->
 <section class="cta-section">
     <div class="fade-in">
@@ -1253,10 +1304,10 @@
         <div>
             <h4>運営情報</h4>
             <ul class="footer-links">
-                <li><a href="#">特定商取引法に基づく表記</a></li>
-                <li><a href="#">利用規約</a></li>
-                <li><a href="#">プライバシーポリシー</a></li>
-                <li><a href="mailto:sports.bukatsu.soudan.@gmail.com">お問い合わせ</a></li>
+                <li><a href="legal.html">特定商取引法に基づく表記</a></li>
+                <li><a href="terms.html">利用規約</a></li>
+                <li><a href="privacy.html">プライバシーポリシー</a></li>
+                <li><a href="#" onclick="scrollTo('contact')">お問い合わせ</a></li>
             </ul>
         </div>
     </div>
@@ -1521,5 +1572,64 @@ function showToast(msg) {
     setTimeout(()=>t.classList.remove('show'), 3500);
 }
 </script>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+// ========== EMAILJS設定 ==========
+// 以下3つの値をEmailJS(https://www.emailjs.com)で取得した値に変更してください
+const EMAILJS_PUBLIC_KEY  = "Ec4dkdUV5P4aUrf1t";   // Account > API Keys
+const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";   // Email Services の Service ID
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  // Email Templates の Template ID
+
+(function(){
+    if (EMAILJS_PUBLIC_KEY) {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    }
+})();
+
+function sendContact() {
+    const name  = document.getElementById('c_name').value.trim();
+    const email = document.getElementById('c_email').value.trim();
+    const phone = document.getElementById('c_phone').value.trim();
+    const type  = document.getElementById('c_type').value;
+    const msg   = document.getElementById('c_msg').value.trim();
+    const btn   = document.getElementById('c_btn');
+
+    if (!name || !email || !type || !msg) {
+        showToast('必須項目をすべて入力してください');
+        return;
+    }
+
+    // EmailJS未設定の場合はメール直接リンクにフォールバック
+    if (!EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
+        const subject = encodeURIComponent('【お問い合わせ】' + type + ' - ' + name + '様');
+        const body = encodeURIComponent('お名前: ' + name + '\nメール: ' + email + '\n電話: ' + (phone||'未入力') + '\n種別: ' + type + '\n\n' + msg);
+        window.location.href = 'mailto:sports.bukatsu.soudan.@gmail.com?subject=' + subject + '&body=' + body;
+        return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name:    name,
+        reply_to:     email,
+        phone:        phone || '未入力',
+        inquiry_type: type,
+        message:      msg
+    }).then(function() {
+        document.getElementById('contactFormWrap').style.display = 'none';
+        document.getElementById('contactDone').style.display = 'block';
+        showToast('お問い合わせを送信しました！');
+    }).catch(function(err) {
+        console.error(err);
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> 送信する';
+        showToast('送信に失敗しました。時間をおいて再度お試しください。');
+    });
+}
+</script>
+
 </body>
 </html>
