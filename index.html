@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <title>スポーツ・部活相談サポート | メンター・審判・トレーナー総合マッチング</title>
-    <meta name="description" content="スポーツ・部活相談サポートは、メンター・審判・トレーナーをワンストップでマッチングする日本初のスポーツ人材総合プラットフォームです。部活動の地域移行を支援します。">
+    <title>部活動・大会運営サポート | 指導者・審判・トレーナー総合マッチング</title>
+    <meta name="description" content="現場の先生、監督、大会運営者をワンストップで支援するスポーツ人材マッチングプラットフォームです。地域移行や人材不足をシステムでサポートします。">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
@@ -83,8 +83,6 @@
         .nav .btn-login:hover { background:var(--primary); color:#fff; }
         .nav .btn-register { background:var(--primary); color:#fff !important; font-weight:700; }
         .nav .btn-register:hover { background:var(--primary-dark); }
-        .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; }
-        .hamburger span { width:24px; height:2px; background:var(--gray-800); border-radius:2px; transition:all 0.3s; }
 
         /* ===== HERO ===== */
         .hero {
@@ -249,58 +247,6 @@
         .search-panel[data-panel="trainer"] .btn-search { background:var(--trainer-color); }
         .btn-search:hover { opacity:0.9; transform:translateY(-1px); }
 
-        /* ===== RESULTS ===== */
-        .results-section { padding:60px 24px; background:var(--gray-50); display:none; }
-        .results-section.active { display:block; }
-        .results-container { max-width:1280px; margin:0 auto; }
-        .results-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; }
-        .results-count { font-size:15px; color:var(--gray-600); }
-        .results-count strong { color:var(--dark); font-size:22px; }
-        .results-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:22px; }
-        .result-card {
-            background:#fff; border-radius:var(--radius-md); overflow:hidden;
-            box-shadow:var(--shadow-sm); transition:all 0.3s; border:2px solid transparent;
-        }
-        .result-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-4px); }
-        .rc-top { padding:22px; display:flex; gap:14px; }
-        .rc-avatar {
-            width:60px; height:60px; border-radius:50%; background:var(--gray-200);
-            display:flex; align-items:center; justify-content:center;
-            font-size:22px; color:var(--gray-500); flex-shrink:0;
-        }
-        .rc-info { flex:1; }
-        .rc-name { font-size:17px; font-weight:700; color:var(--dark); margin-bottom:5px; }
-        .rc-badge {
-            display:inline-flex; align-items:center; gap:4px;
-            padding:2px 10px; border-radius:50px; font-size:11px; font-weight:700; margin-right:4px;
-        }
-        .badge-mentor { background:#e3f2fd; color:var(--mentor-color); }
-        .badge-referee { background:#fff3e0; color:var(--referee-color); }
-        .badge-trainer { background:#e8f5e9; color:var(--trainer-color); }
-        .badge-verified { background:#e8f5e9; color:#2e7d32; }
-        .rc-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:7px; font-size:12px; color:var(--gray-600); }
-        .rc-meta span { display:flex; align-items:center; gap:4px; }
-        .rc-body { padding:0 22px; }
-        .rc-sports { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
-        .sport-tag { background:var(--gray-100); padding:3px 11px; border-radius:50px; font-size:11px; font-weight:500; color:var(--gray-700); }
-        .rc-desc {
-            font-size:13px; color:var(--gray-600); line-height:1.7;
-            display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
-        }
-        .rc-foot {
-            padding:14px 22px; margin-top:14px; border-top:1px solid var(--gray-100);
-            display:flex; justify-content:space-between; align-items:center;
-        }
-        .rc-price { font-size:12px; color:var(--gray-500); }
-        .rc-price strong { font-size:17px; color:var(--dark); }
-        .rc-rating { display:flex; align-items:center; gap:4px; color:#ffc107; font-size:13px; }
-        .rc-rating span { color:var(--gray-700); font-weight:700; }
-        .btn-detail {
-            padding:9px 18px; border:none; border-radius:50px; font-size:12px; font-weight:700;
-            color:#fff; background:var(--primary); cursor:pointer; transition:all 0.3s; font-family:inherit;
-        }
-        .btn-detail:hover { opacity:0.9; }
-
         /* ===== HOW IT WORKS ===== */
         .how-section { padding:100px 24px; background:#fff; }
         .how-tabs { display:flex; justify-content:center; gap:8px; margin-bottom:56px; flex-wrap:wrap; }
@@ -326,153 +272,6 @@
         .how-step h4 { font-size:15px; font-weight:700; color:var(--dark); margin-bottom:7px; }
         .how-step p { font-size:13px; color:var(--gray-600); line-height:1.7; }
 
-        /* ===== PACKAGE ===== */
-        .package-section { padding:100px 24px; background:linear-gradient(135deg,#1a2d50,#0a1628); color:#fff; }
-        .pkg-container { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
-        .pkg-content h2 { font-size:clamp(26px,3.5vw,38px); font-weight:900; margin-bottom:18px; line-height:1.3; }
-        .pkg-content p { font-size:15px; color:rgba(255,255,255,0.72); line-height:1.9; margin-bottom:28px; }
-        .pkg-benefits { list-style:none; margin-bottom:36px; }
-        .pkg-benefits li { display:flex; align-items:flex-start; gap:12px; padding:10px 0; font-size:14px; color:rgba(255,255,255,0.9); }
-        .pkg-benefits li i { color:var(--accent); margin-top:4px; }
-        .pkg-calc {
-            background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);
-            border-radius:var(--radius-lg); padding:32px; backdrop-filter:blur(10px);
-        }
-        .calc-title { font-size:17px; font-weight:700; margin-bottom:22px; text-align:center; }
-        .calc-row { display:flex; justify-content:space-between; align-items:center; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.1); }
-        .calc-row label { font-size:13px; color:rgba(255,255,255,0.8); }
-        .calc-row select, .calc-row input[type="number"] {
-            background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2);
-            border-radius:var(--radius-sm); padding:9px 13px; color:#fff; font-size:13px;
-            font-family:inherit; width:155px;
-        }
-        .calc-row select option { color:#333; }
-        .calc-total { text-align:center; padding:22px 0 14px; }
-        .calc-total .lbl { font-size:12px; color:rgba(255,255,255,0.6); }
-        .calc-total .amt { font-size:34px; font-weight:900; color:#fff; }
-        .calc-total .note { font-size:11px; color:rgba(255,255,255,0.5); margin-top:4px; }
-        .btn-pkg {
-            width:100%; padding:15px; background:linear-gradient(135deg,var(--secondary),#ff8a50);
-            border:none; border-radius:50px; color:#fff; font-size:15px; font-weight:700;
-            cursor:pointer; margin-top:14px; font-family:inherit; transition:all 0.3s;
-        }
-        .btn-pkg:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(255,107,53,0.4); }
-
-        /* ===== PRICING ===== */
-        .pricing-section { padding:100px 24px; background:var(--gray-50); }
-        .pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; max-width:1050px; margin:0 auto; }
-        .pricing-card {
-            background:#fff; border-radius:var(--radius-lg); padding:36px 28px;
-            box-shadow:var(--shadow-sm); transition:all 0.3s;
-            border:2px solid transparent; position:relative;
-        }
-        .pricing-card.popular {
-            border-color:var(--primary); box-shadow:var(--shadow-lg); transform:scale(1.04);
-        }
-        .pricing-card.popular::before {
-            content:'人気No.1'; position:absolute; top:-13px; left:50%; transform:translateX(-50%);
-            background:var(--primary); color:#fff; padding:4px 20px;
-            border-radius:50px; font-size:12px; font-weight:700;
-        }
-        .p-plan { font-size:13px; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:1px; margin-bottom:6px; }
-        .p-name { font-size:22px; font-weight:900; color:var(--dark); margin-bottom:6px; }
-        .p-desc { font-size:12px; color:var(--gray-600); margin-bottom:20px; }
-        .p-amount { margin-bottom:28px; }
-        .p-amount .amt { font-size:40px; font-weight:900; color:var(--dark); }
-        .p-amount .per { font-size:13px; color:var(--gray-500); }
-        .p-features { list-style:none; margin-bottom:28px; }
-        .p-features li {
-            display:flex; align-items:center; gap:10px; padding:9px 0;
-            font-size:13px; color:var(--gray-700); border-bottom:1px solid var(--gray-100);
-        }
-        .p-features li:last-child { border-bottom:none; }
-        .p-features li i.fa-check { color:var(--accent); }
-        .p-features li i.fa-xmark { color:var(--gray-400); }
-        .btn-plan {
-            width:100%; padding:13px; border:2px solid var(--primary); border-radius:50px;
-            background:transparent; color:var(--primary); font-size:14px; font-weight:700;
-            cursor:pointer; transition:all 0.3s; font-family:inherit;
-        }
-        .pricing-card.popular .btn-plan { background:var(--primary); color:#fff; }
-        .btn-plan:hover { background:var(--primary); color:#fff; }
-
-        /* ===== STATS ===== */
-        .stats-section { padding:72px 24px; background:linear-gradient(135deg,var(--primary),#4285f4); }
-        .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:28px; max-width:1050px; margin:0 auto; text-align:center; }
-        .stat-num { font-size:46px; font-weight:900; color:#fff; }
-        .stat-lbl { font-size:13px; color:rgba(255,255,255,0.8); margin-top:4px; }
-
-        /* ===== TESTIMONIALS ===== */
-        .testimonials-section { padding:100px 24px; background:#fff; }
-        .testimonials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; max-width:1200px; margin:0 auto; }
-        .test-card {
-            background:var(--gray-50); border-radius:var(--radius-md); padding:28px;
-            transition:all 0.3s;
-        }
-        .test-card:hover { box-shadow:var(--shadow-md); }
-        .test-stars { color:#ffc107; margin-bottom:14px; font-size:13px; }
-        .test-text { font-size:13px; color:var(--gray-700); line-height:1.8; margin-bottom:18px; }
-        .test-author { display:flex; align-items:center; gap:11px; }
-        .test-avatar {
-            width:42px; height:42px; border-radius:50%; background:var(--gray-300);
-            display:flex; align-items:center; justify-content:center;
-            font-weight:700; color:var(--gray-600); font-size:15px;
-        }
-        .test-name { font-size:13px; font-weight:700; color:var(--dark); }
-        .test-role { font-size:11px; color:var(--gray-500); }
-
-        /* ===== REGISTER ===== */
-        .register-section { padding:100px 24px; background:var(--gray-50); }
-        .register-container { max-width:760px; margin:0 auto; }
-        .reg-tabs {
-            display:flex; gap:4px; margin-bottom:28px;
-            background:var(--gray-200); border-radius:50px; padding:4px;
-        }
-        .reg-tab {
-            flex:1; padding:12px 22px; border:none; background:transparent; border-radius:50px;
-            font-size:14px; font-weight:700; cursor:pointer; transition:all 0.3s;
-            font-family:inherit; color:var(--gray-600);
-        }
-        .reg-tab.active { background:#fff; color:var(--dark); box-shadow:var(--shadow-sm); }
-        .reg-form {
-            display:none; background:#fff; border-radius:var(--radius-lg);
-            padding:36px; box-shadow:var(--shadow-md);
-        }
-        .reg-form.active { display:block; }
-        .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
-        .form-row.full { grid-template-columns:1fr; }
-        .reg-form label { font-size:12px; font-weight:700; color:var(--gray-700); margin-bottom:5px; display:block; }
-        .reg-form input, .reg-form select, .reg-form textarea {
-            width:100%; padding:11px 14px; border:2px solid var(--gray-200); border-radius:var(--radius-sm);
-            font-size:13px; font-family:inherit; color:var(--gray-800); transition:border-color 0.3s;
-        }
-        .reg-form textarea { resize:vertical; min-height:90px; }
-        .reg-form input:focus, .reg-form select:focus, .reg-form textarea:focus { outline:none; border-color:var(--primary); }
-        .checkbox-group { display:flex; flex-wrap:wrap; gap:10px; margin-top:7px; }
-        .checkbox-label { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--gray-700); cursor:pointer; }
-        .checkbox-label input { width:auto; }
-        .btn-reg-submit {
-            width:100%; padding:15px; background:var(--primary); border:none;
-            border-radius:var(--radius-sm); color:#fff; font-size:15px; font-weight:700;
-            cursor:pointer; margin-top:22px; font-family:inherit; transition:all 0.3s;
-        }
-        .btn-reg-submit:hover { background:var(--primary-dark); }
-
-        /* ===== FAQ ===== */
-        .faq-section { padding:100px 24px; background:#fff; }
-        .faq-container { max-width:780px; margin:0 auto; }
-        .faq-item { border-bottom:1px solid var(--gray-200); }
-        .faq-q {
-            width:100%; padding:19px 0; background:none; border:none; text-align:left;
-            font-size:15px; font-weight:700; color:var(--dark); cursor:pointer;
-            display:flex; justify-content:space-between; align-items:center;
-            font-family:inherit; line-height:1.5; gap:16px;
-        }
-        .faq-q i { transition:transform 0.3s; color:var(--gray-400); flex-shrink:0; }
-        .faq-item.open .faq-q i { transform:rotate(180deg); }
-        .faq-a { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
-        .faq-a-inner { padding:0 0 18px; font-size:13px; color:var(--gray-600); line-height:1.8; }
-
         /* ===== CTA ===== */
         .cta-section { padding:100px 24px; background:linear-gradient(135deg,#0a1628,#1a2d50); text-align:center; }
         .cta-section h2 { font-size:clamp(26px,4vw,40px); font-weight:900; color:#fff; margin-bottom:14px; }
@@ -496,1144 +295,227 @@
         .footer-social { display:flex; gap:12px; }
         .footer-social a { color:rgba(255,255,255,0.5); font-size:17px; transition:color 0.2s; }
         .footer-social a:hover { color:#fff; }
-        .footer-contact { font-size:12px; }
-        .footer-contact a { color:rgba(255,255,255,0.7); text-decoration:none; }
-        .footer-contact a:hover { color:#fff; }
-
-        /* ===== MODAL ===== */
-        .modal-overlay {
-            display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6);
-            z-index:2000; align-items:center; justify-content:center; padding:22px;
-            backdrop-filter:blur(4px);
-        }
-        .modal-overlay.active { display:flex; }
-        .modal {
-            background:#fff; border-radius:var(--radius-lg);
-            max-width:680px; width:100%; max-height:90vh; overflow-y:auto;
-            box-shadow:var(--shadow-xl);
-        }
-        .modal-header {
-            padding:22px 28px; border-bottom:1px solid var(--gray-200);
-            display:flex; justify-content:space-between; align-items:center;
-        }
-        .modal-header h3 { font-size:18px; font-weight:900; color:var(--dark); }
-        .modal-close {
-            width:34px; height:34px; border-radius:50%; border:none; background:var(--gray-100);
-            cursor:pointer; font-size:17px; color:var(--gray-600);
-            display:flex; align-items:center; justify-content:center; transition:all 0.2s;
-        }
-        .modal-close:hover { background:var(--gray-200); }
-        .modal-body { padding:28px; }
-        .modal-profile { display:flex; gap:22px; margin-bottom:22px; }
-        .modal-avatar {
-            width:90px; height:90px; border-radius:50%; background:var(--gray-200);
-            display:flex; align-items:center; justify-content:center;
-            font-size:36px; color:var(--gray-500); flex-shrink:0;
-        }
-        .modal-info h4 { font-size:22px; font-weight:900; margin-bottom:8px; }
-        .modal-dg { display:grid; grid-template-columns:1fr 1fr; gap:13px; margin-bottom:22px; }
-        .modal-di { background:var(--gray-50); padding:14px; border-radius:var(--radius-sm); }
-        .modal-di .lbl { font-size:10px; font-weight:700; color:var(--gray-500); text-transform:uppercase; letter-spacing:0.5px; }
-        .modal-di .val { font-size:14px; font-weight:700; color:var(--dark); margin-top:3px; }
-        .modal-footer {
-            padding:20px 28px; border-top:1px solid var(--gray-200); display:flex; gap:11px;
-        }
-        .btn-modal {
-            flex:1; padding:13px; border-radius:var(--radius-sm);
-            font-size:14px; font-weight:700; cursor:pointer; border:none;
-            transition:all 0.3s; font-family:inherit;
-        }
-        .btn-modal-p { background:var(--primary); color:#fff; }
-        .btn-modal-s { background:var(--gray-100); color:var(--gray-700); }
-
-        /* ===== TOAST ===== */
-        .toast {
-            position:fixed; bottom:22px; right:22px; background:var(--dark); color:#fff;
-            padding:14px 22px; border-radius:var(--radius-sm); font-size:13px; font-weight:500;
-            z-index:3000; transform:translateY(100px); opacity:0; transition:all 0.4s;
-            display:flex; align-items:center; gap:10px; box-shadow:var(--shadow-xl); max-width:360px;
-        }
-        .toast.show { transform:translateY(0); opacity:1; }
-        .toast i { font-size:17px; }
-        .toast.success i { color:var(--accent); }
-
-        /* ===== MOBILE NAV ===== */
-        .mobile-nav {
-            display:none; position:fixed; top:68px; left:0; right:0; bottom:0;
-            background:rgba(255,255,255,0.98); z-index:999;
-            padding:22px; flex-direction:column; gap:6px;
-        }
-        .mobile-nav.active { display:flex; }
-        .mobile-nav a {
-            display:block; padding:15px; text-decoration:none; color:var(--gray-800);
-            font-size:15px; font-weight:500; border-radius:var(--radius-sm); transition:background 0.2s;
-        }
-        .mobile-nav a:hover { background:var(--gray-100); }
-
-        /* ===== ANIMATIONS ===== */
-        .fade-in { opacity:0; transform:translateY(28px); transition:all 0.75s ease; }
-        .fade-in.visible { opacity:1; transform:translateY(0); }
-
-        /* ===== RESPONSIVE ===== */
-        @media(max-width:1024px){
-            .services-grid { grid-template-columns:1fr; max-width:480px; margin:0 auto; }
-            .pricing-grid { grid-template-columns:1fr; max-width:380px; margin:0 auto; }
-            .pricing-card.popular { transform:scale(1); }
-            .pkg-container { grid-template-columns:1fr; }
-            .testimonials-grid { grid-template-columns:1fr; max-width:480px; margin:0 auto; }
-            .stats-grid { grid-template-columns:repeat(2,1fr); }
-            .footer-grid { grid-template-columns:1fr 1fr; }
-        }
-        @media(max-width:768px){
-            .nav { display:none; }
-            .hamburger { display:flex; }
-            .how-steps { flex-direction:column; }
-            .how-steps::before { display:none; }
-            .hero-stats { gap:22px; }
-            .form-row { grid-template-columns:1fr; }
-            .search-tabs { flex-direction:column; }
-            .modal-profile { flex-direction:column; align-items:center; text-align:center; }
-            .modal-dg { grid-template-columns:1fr; }
-            .results-grid { grid-template-columns:1fr; }
-            .footer-grid { grid-template-columns:1fr; }
-            .footer-bottom { flex-direction:column; text-align:center; }
-        }
     </style>
 </head>
 <body>
-
-<!-- ===== HEADER ===== -->
-<header class="header" id="header">
-    <div class="header-inner">
-        <div class="logo" onclick="scrollTo('hero')">
-            <img src="assets/images/logo.png" alt="SpoMatch" style="height:44px;width:auto;display:block;">
-        </div>
-        <nav class="nav" id="nav">
-            <a onclick="scrollTo('services')">サービス</a>
-            <a onclick="scrollTo('search')">人材を探す</a>
-            <a onclick="scrollTo('pricing')">料金</a>
-            <a onclick="scrollTo('faq')">FAQ</a>
-            <a onclick="scrollTo('contact')">お問い合わせ</a>
-            <a class="btn-login" onclick="showToast('ログイン機能は準備中です')">ログイン</a>
-            <a class="btn-register" onclick="scrollTo('register')">無料登録</a>
-        </nav>
-        <div class="hamburger" id="hamburger" onclick="toggleMobileNav()">
-            <span></span><span></span><span></span>
-        </div>
-    </div>
-</header>
-
-<div class="mobile-nav" id="mobileNav">
-    <a onclick="scrollTo('services');toggleMobileNav()">サービス</a>
-    <a onclick="scrollTo('search');toggleMobileNav()">人材を探す</a>
-    <a onclick="scrollTo('pricing');toggleMobileNav()">料金</a>
-    <a onclick="scrollTo('faq');toggleMobileNav()">FAQ</a>
-    <a onclick="scrollTo('contact');toggleMobileNav()">お問い合わせ</a>
-    <a onclick="scrollTo('register');toggleMobileNav()">無料登録</a>
-</div>
-
-<!-- ===== HERO ===== -->
-<section class="hero" id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-particles" id="particles"></div>
-    <div class="hero-content">
-        <div class="hero-badge"><i class="fas fa-bolt"></i> 部活動の地域移行を支援するプラットフォーム</div>
-        <h1>
-            <span class="h-blue">メンター</span>・<span class="h-orange">審判</span>・<span class="h-green">トレーナー</span><br>
-            スポーツ人材を<br>ワンストップで
-        </h1>
-        <p class="hero-desc">
-            指導者・審判・トレーナーを一括検索・依頼できる、スポーツ人材総合マッチングプラットフォーム。<br>
-            地域のスポーツを、もっと豊かに。
-        </p>
-        <div class="hero-actions">
-            <button class="btn-hero btn-primary-hero" onclick="scrollTo('search')">
-                <i class="fas fa-search"></i>人材を探す
-            </button>
-            <button class="btn-hero btn-secondary-hero" onclick="scrollTo('register')">
-                <i class="fas fa-user-plus"></i>人材として登録する
-            </button>
-        </div>
-        <div class="hero-stats">
-            <div>
-                <div class="hero-stat-num" id="stat1">0</div>
-                <div class="hero-stat-lbl">登録人材数</div>
-            </div>
-            <div>
-                <div class="hero-stat-num" id="stat2">0</div>
-                <div class="hero-stat-lbl">対応競技数</div>
-            </div>
-            <div>
-                <div class="hero-stat-num" id="stat3">0</div>
-                <div class="hero-stat-lbl">マッチング実績</div>
-            </div>
-            <div>
-                <div class="hero-stat-num" id="stat4">0</div>
-                <div class="hero-stat-lbl">平均評価</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== SERVICES ===== -->
-<section class="services-section" id="services">
-    <div class="section-header fade-in">
-        <div class="section-label"><i class="fas fa-layer-group"></i> SERVICES</div>
-        <h2 class="section-title">3つのマッチングサービス</h2>
-        <p class="section-sub">スポーツの現場で必要な人材を、目的に応じて最適にマッチング</p>
-    </div>
-    <div class="services-grid">
-        <div class="service-card sc-mentor fade-in" onclick="scrollTo('search')">
-            <img src="assets/images/service-mentor.jpg" alt="メンターマッチング" style="width:100%;height:180px;object-fit:cover;border-radius:16px 16px 0 0;">
-            <div class="sc-head">
-                <div class="sc-icon"><i class="fas fa-graduation-cap"></i></div>
-                <h3>メンターマッチング</h3>
-                <p>元プロ選手・経験豊富な指導者による技術指導、メンタルサポート、キャリア相談をオンライン・対面で</p>
-            </div>
-            <div class="sc-body">
-                <ul class="sc-features">
-                    <li><i class="fas fa-check-circle"></i>技術指導・スキルアップ</li>
-                    <li><i class="fas fa-check-circle"></i>メンタルサポート</li>
-                    <li><i class="fas fa-check-circle"></i>進路・キャリア相談</li>
-                    <li><i class="fas fa-check-circle"></i>オンライン対応可</li>
-                </ul>
-            </div>
-            <div class="sc-foot">
-                <div class="sc-price"><strong>¥3,000</strong> /時間〜</div>
-                <button class="btn-sc">探す →</button>
-            </div>
-        </div>
-
-        <div class="service-card sc-referee fade-in" onclick="scrollTo('search')">
-            <img src="assets/images/service-referee.jpg" alt="審判派遣" style="width:100%;height:180px;object-fit:cover;border-radius:16px 16px 0 0;">
-            <div class="sc-head">
-                <div class="sc-icon"><i class="fas fa-flag"></i></div>
-                <h3>審判派遣</h3>
-                <p>公認資格保持者の審判を練習試合・大会・リーグ戦に柔軟に派遣。資格等級や競技種目で検索可能</p>
-            </div>
-            <div class="sc-body">
-                <ul class="sc-features">
-                    <li><i class="fas fa-check-circle"></i>公認審判資格者のみ</li>
-                    <li><i class="fas fa-check-circle"></i>大会・練習試合対応</li>
-                    <li><i class="fas fa-check-circle"></i>複数名の一括手配</li>
-                    <li><i class="fas fa-check-circle"></i>緊急依頼にも対応</li>
-                </ul>
-            </div>
-            <div class="sc-foot">
-                <div class="sc-price"><strong>¥5,000</strong> /半日〜</div>
-                <button class="btn-sc">探す →</button>
-            </div>
-        </div>
-
-        <div class="service-card sc-trainer fade-in" onclick="scrollTo('search')">
-            <img src="assets/images/service-trainer.jpg" alt="トレーナー派遣" style="width:100%;height:180px;object-fit:cover;border-radius:16px 16px 0 0;">
-            <div class="sc-head">
-                <div class="sc-icon"><i class="fas fa-heartbeat"></i></div>
-                <h3>トレーナー派遣</h3>
-                <p>アスレティックトレーナー・理学療法士・S&Cコーチを試合帯同・定期指導・リハビリ支援に派遣</p>
-            </div>
-            <div class="sc-body">
-                <ul class="sc-features">
-                    <li><i class="fas fa-check-circle"></i>試合・大会帯同</li>
-                    <li><i class="fas fa-check-circle"></i>ケガの予防・リハビリ</li>
-                    <li><i class="fas fa-check-circle"></i>フィジカル強化指導</li>
-                    <li><i class="fas fa-check-circle"></i>栄養指導対応可</li>
-                </ul>
-            </div>
-            <div class="sc-foot">
-                <div class="sc-price"><strong>¥10,000</strong> /半日〜</div>
-                <button class="btn-sc">探す →</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== SEARCH ===== -->
-<section class="search-section" id="search">
-    <div class="search-container">
-        <div class="section-header fade-in">
-            <div class="section-label"><i class="fas fa-search"></i> SEARCH</div>
-            <h2 class="section-title">人材を探す</h2>
-            <p class="section-sub">条件を指定して最適な人材を検索</p>
-        </div>
-        <div class="search-tabs">
-            <button class="search-tab active" data-tab="mentor" onclick="switchSearchTab('mentor')">
-                <i class="fas fa-graduation-cap"></i>メンター
-            </button>
-            <button class="search-tab" data-tab="referee" onclick="switchSearchTab('referee')">
-                <i class="fas fa-flag"></i>審判
-            </button>
-            <button class="search-tab" data-tab="trainer" onclick="switchSearchTab('trainer')">
-                <i class="fas fa-heartbeat"></i>トレーナー
-            </button>
-        </div>
-
-        <div class="search-panel active" data-panel="mentor">
-            <div class="search-form">
-                <div class="form-group">
-                    <label>競技種目</label>
-                    <select>
-                        <option value="">すべての競技</option>
-                        <option>サッカー</option><option>野球</option><option>バスケットボール</option>
-                        <option>バレーボール</option><option>テニス</option><option>陸上競技</option>
-                        <option>水泳</option><option>柔道</option><option>剣道</option>
-                        <option>卓球</option><option>バドミントン</option><option>ハンドボール</option>
-                    </select>
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">SP</div>
+                <div>
+                    <div class="logo-text">スポーツ・部活相談サポート</div>
+                    <div class="logo-sub">現場を支えるサポーター・マッチング</div>
                 </div>
-                <div class="form-group">
-                    <label>目的</label>
-                    <select>
-                        <option value="">すべての目的</option>
-                        <option>技術指導</option><option>メンタルサポート</option>
-                        <option>進路・キャリア相談</option><option>チーム指導</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>地域</label>
-                    <select>
-                        <option value="">すべての地域</option>
-                        <option>宮城県</option><option>東北地方</option><option>関東地方</option>
-                        <option>中部地方</option><option>近畿地方</option><option>オンライン対応</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>予算上限</label>
-                    <select>
-                        <option value="">指定なし</option>
-                        <option>〜3,000円/時間</option><option>〜5,000円/時間</option>
-                        <option>〜10,000円/時間</option><option>10,000円以上/時間</option>
-                    </select>
-                </div>
-                <button class="btn-search" onclick="performSearch('mentor')">
-                    <i class="fas fa-search"></i>メンターを検索
-                </button>
-            </div>
+            </a>
+            <nav class="nav">
+                <a href="#services">サービス</a>
+                <a href="#search">サポーターを探す</a>
+                <a href="#how">利用の流れ</a>
+                <a href="#" class="btn-login">ログイン</a>
+                <a href="#" class="btn-register">利用登録</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="search-panel" data-panel="referee">
-            <div class="search-form">
-                <div class="form-group">
-                    <label>競技種目</label>
-                    <select>
-                        <option value="">すべての競技</option>
-                        <option>サッカー</option><option>フットサル</option><option>野球</option>
-                        <option>バスケットボール</option><option>バレーボール</option><option>テニス</option>
-                        <option>ハンドボール</option><option>ラグビー</option><option>柔道</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>審判資格等級</label>
-                    <select>
-                        <option value="">指定なし</option>
-                        <option>1級</option><option>2級</option><option>3級</option><option>4級</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>派遣希望日</label>
-                    <input type="date">
-                </div>
-                <div class="form-group">
-                    <label>地域</label>
-                    <select>
-                        <option value="">すべての地域</option>
-                        <option>宮城県</option><option>東北地方</option><option>関東地方</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>必要人数</label>
-                    <select>
-                        <option>1名</option><option>2名</option><option>3名</option><option>4名以上</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>拘束時間</label>
-                    <select>
-                        <option>半日（4時間以内）</option><option>1日（8時間以内）</option><option>その他</option>
-                    </select>
-                </div>
-                <button class="btn-search" onclick="performSearch('referee')">
-                    <i class="fas fa-search"></i>審判を検索
-                </button>
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-check-circle"></i> 顧問の先生・監督・大会運営者を支援</div>
+            <h1>
+                <span class="h-blue">現場の負担をゼロに。</span><br>
+                <span class="h-orange">指導者・審判</span>を<br>
+                <span class="h-green">即座にマッチング。</span>
+            </h1>
+            <p class="hero-desc">
+                顧問の先生、クラブ監督、大会運営者のためのサポートプラットフォーム。
+                「専門指導がほしい」「審判が急に必要」をシステムで解決。地域移行へのスムーズな連携を支援します。
+            </p>
+            <div class="hero-actions">
+                <a href="#search" class="btn-hero btn-primary-hero">サポーターを探す <i class="fas fa-search"></i></a>
+                <a href="#how" class="btn-hero btn-secondary-hero">利用方法を見る <i class="fas fa-play-circle"></i></a>
+            </div>
+            <div class="hero-stats">
+                <div><div class="hero-stat-num">2,500+</div><div class="hero-stat-lbl">登録サポーター</div></div>
+                <div><div class="hero-stat-num">1,200+</div><div class="hero-stat-lbl">サポート実績</div></div>
+                <div><div class="hero-stat-num">4.8/5</div><div class="hero-stat-lbl">満足度</div></div>
             </div>
         </div>
+    </section>
 
-        <div class="search-panel" data-panel="trainer">
-            <div class="search-form">
-                <div class="form-group">
-                    <label>専門分野</label>
-                    <select>
-                        <option value="">すべての分野</option>
-                        <option>アスレティックトレーナー</option>
-                        <option>ストレングス&コンディショニング</option>
-                        <option>理学療法・リハビリ</option>
-                        <option>スポーツ栄養</option><option>メンタルトレーニング</option>
-                    </select>
+    <section class="services-section" id="services">
+        <div class="section-header">
+            <span class="section-label">OUR SERVICES</span>
+            <h2 class="section-title">現場を支える3つのマッチング</h2>
+            <p class="section-sub">専門的な技術から、大会の運営支援まで。システムで最適なパートナーを繋ぎます。</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card sc-mentor">
+                <div class="sc-head">
+                    <div class="sc-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3>指導アドバイザー</h3>
+                    <p>部活動やクラブの技術指導。現場の先生と二人三脚で選手を育てます。</p>
                 </div>
-                <div class="form-group">
-                    <label>目的</label>
-                    <select>
-                        <option value="">すべての目的</option>
-                        <option>試合・大会帯同</option><option>定期指導</option>
-                        <option>ケガのリハビリ</option><option>フィジカル強化</option><option>救護対応</option>
-                    </select>
+                <div class="sc-body">
+                    <ul class="sc-features">
+                        <li><i class="fas fa-check"></i> 専門種目の技術指導</li>
+                        <li><i class="fas fa-check"></i> 練習メニューの作成支援</li>
+                        <li><i class="fas fa-check"></i> 定期・スポットどちらも可</li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label>派遣希望日</label>
-                    <input type="date">
-                </div>
-                <div class="form-group">
-                    <label>地域</label>
-                    <select>
-                        <option value="">すべての地域</option>
-                        <option>宮城県</option><option>東北地方</option><option>関東地方</option>
-                    </select>
-                </div>
-                <button class="btn-search" onclick="performSearch('trainer')">
-                    <i class="fas fa-search"></i>トレーナーを検索
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== RESULTS ===== -->
-<section class="results-section" id="results">
-    <div class="results-container">
-        <div class="results-header">
-            <div class="results-count"><strong id="resultsCount">0</strong> 件の人材が見つかりました</div>
-        </div>
-        <div class="results-grid" id="resultsGrid"></div>
-    </div>
-</section>
-
-<!-- ===== HOW IT WORKS ===== -->
-<section class="how-section" id="how">
-    <div class="section-header fade-in">
-        <div class="section-label"><i class="fas fa-route"></i> HOW IT WORKS</div>
-        <h2 class="section-title">ご利用の流れ</h2>
-        <p class="section-sub">シンプルな4ステップで、最適な人材とマッチング</p>
-    </div>
-    <div class="how-tabs">
-        <button class="how-tab active" onclick="switchHowTab(this,'how-demand')">依頼する方</button>
-        <button class="how-tab" onclick="switchHowTab(this,'how-supply')">登録する方（人材側）</button>
-    </div>
-    <div class="how-content active" id="how-demand">
-        <div class="how-steps fade-in">
-            <div class="how-step"><div class="step-num">1</div><h4>条件を入力</h4><p>競技・地域・日程・予算などの条件を入力して検索</p></div>
-            <div class="how-step"><div class="step-num">2</div><h4>人材を選ぶ</h4><p>プロフィール・評価・実績を確認して最適な人材を選択</p></div>
-            <div class="how-step"><div class="step-num">3</div><h4>依頼・決済</h4><p>メッセージで詳細を調整し、安全なオンライン決済で完了</p></div>
-            <div class="how-step"><div class="step-num">4</div><h4>評価・レビュー</h4><p>サービス終了後に相互評価。コミュニティの品質を維持</p></div>
-        </div>
-    </div>
-    <div class="how-content" id="how-supply">
-        <div class="how-steps fade-in">
-            <div class="how-step"><div class="step-num">1</div><h4>無料登録</h4><p>プロフィール・資格・経験を入力して登録（審査あり）</p></div>
-            <div class="how-step"><div class="step-num">2</div><h4>依頼を受ける</h4><p>条件に合う依頼が届いたら内容を確認して承諾</p></div>
-            <div class="how-step"><div class="step-num">3</div><h4>サービス提供</h4><p>指導・審判・トレーニングを現場またはオンラインで提供</p></div>
-            <div class="how-step"><div class="step-num">4</div><h4>報酬受取</h4><p>サービス完了後、プラットフォームから安全に報酬を受取</p></div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== PACKAGE ===== -->
-<section class="package-section" id="package">
-    <div class="pkg-container fade-in">
-        <div class="pkg-content">
-            <h2>大会サポート<br>パッケージ</h2>
-            <p>審判とトレーナーをまとめて手配できる、大会主催者向けのワンストップサービス。セット割引で最大20%OFF。</p>
-            <ul class="pkg-benefits">
-                <li><i class="fas fa-check-circle"></i>審判＋トレーナーを一括手配</li>
-                <li><i class="fas fa-check-circle"></i>セット割引で最大20%OFF</li>
-                <li><i class="fas fa-check-circle"></i>専属コーディネーターが対応</li>
-                <li><i class="fas fa-check-circle"></i>緊急時の代替人材を保証</li>
-                <li><i class="fas fa-check-circle"></i>スポーツ保険の取次対応</li>
-            </ul>
-        </div>
-        <div class="pkg-calc">
-            <div class="calc-title"><i class="fas fa-calculator"></i> 簡易見積もり</div>
-            <div class="calc-row">
-                <label>競技種目</label>
-                <select id="calcSport" onchange="calcPackage()">
-                    <option value="soccer">サッカー</option>
-                    <option value="baseball">野球</option>
-                    <option value="basketball">バスケットボール</option>
-                    <option value="volleyball">バレーボール</option>
-                    <option value="other">その他</option>
-                </select>
-            </div>
-            <div class="calc-row">
-                <label>審判人数</label>
-                <input type="number" id="calcRef" value="2" min="0" max="10" onchange="calcPackage()">
-            </div>
-            <div class="calc-row">
-                <label>トレーナー人数</label>
-                <input type="number" id="calcTra" value="1" min="0" max="5" onchange="calcPackage()">
-            </div>
-            <div class="calc-row">
-                <label>拘束時間</label>
-                <select id="calcHrs" onchange="calcPackage()">
-                    <option value="1">半日（4時間）</option>
-                    <option value="2">1日（8時間）</option>
-                </select>
-            </div>
-            <div class="calc-total">
-                <div class="lbl">お見積もり金額（税込）</div>
-                <div class="amt" id="calcTotal">¥0</div>
-                <div class="note">※交通費別途。正式なお見積もりはお問い合わせください</div>
-            </div>
-            <button class="btn-pkg" onclick="showToast('お見積もり依頼を受け付けました！')">
-                <i class="fas fa-paper-plane"></i> 正式な見積もりを依頼する
-            </button>
-        </div>
-    </div>
-</section>
-
-<!-- ===== PRICING ===== -->
-<section class="pricing-section" id="pricing">
-    <div class="section-header fade-in">
-        <div class="section-label"><i class="fas fa-tags"></i> PRICING</div>
-        <h2 class="section-title">料金プラン（人材登録者向け）</h2>
-        <p class="section-sub">登録は無料。あなたの活動スタイルに合わせてプランを選択</p>
-    </div>
-    <div class="pricing-grid fade-in">
-        <div class="pricing-card">
-            <div class="p-plan">FREE</div>
-            <div class="p-name">フリープラン</div>
-            <div class="p-desc">まずは試してみたい方に</div>
-            <div class="p-amount"><span class="amt">¥0</span><span class="per">/月</span></div>
-            <ul class="p-features">
-                <li><i class="fas fa-check"></i>プロフィール作成</li>
-                <li><i class="fas fa-check"></i>月3件まで応募可能</li>
-                <li><i class="fas fa-check"></i>基本メッセージ機能</li>
-                <li><i class="fas fa-xmark"></i>優先表示</li>
-                <li><i class="fas fa-xmark"></i>実績バッジ</li>
-                <li><i class="fas fa-xmark"></i>分析ダッシュボード</li>
-            </ul>
-            <button class="btn-plan" onclick="scrollTo('register')">無料で始める</button>
-        </div>
-        <div class="pricing-card popular">
-            <div class="p-plan">PRO</div>
-            <div class="p-name">プロプラン</div>
-            <div class="p-desc">本格的に活動したい方に</div>
-            <div class="p-amount"><span class="amt">¥1,980</span><span class="per">/月</span></div>
-            <ul class="p-features">
-                <li><i class="fas fa-check"></i>プロフィール作成</li>
-                <li><i class="fas fa-check"></i>応募無制限</li>
-                <li><i class="fas fa-check"></i>優先メッセージ機能</li>
-                <li><i class="fas fa-check"></i>検索結果で優先表示</li>
-                <li><i class="fas fa-check"></i>実績バッジ表示</li>
-                <li><i class="fas fa-xmark"></i>分析ダッシュボード</li>
-            </ul>
-            <button class="btn-plan" onclick="scrollTo('register')">プロプランで始める</button>
-        </div>
-        <div class="pricing-card">
-            <div class="p-plan">PREMIUM</div>
-            <div class="p-name">プレミアムプラン</div>
-            <div class="p-desc">プロフェッショナルの方に</div>
-            <div class="p-amount"><span class="amt">¥4,980</span><span class="per">/月</span></div>
-            <ul class="p-features">
-                <li><i class="fas fa-check"></i>プロプランの全機能</li>
-                <li><i class="fas fa-check"></i>応募無制限</li>
-                <li><i class="fas fa-check"></i>最優先表示</li>
-                <li><i class="fas fa-check"></i>PRO認定バッジ</li>
-                <li><i class="fas fa-check"></i>分析ダッシュボード</li>
-                <li><i class="fas fa-check"></i>手数料割引（5%OFF）</li>
-            </ul>
-            <button class="btn-plan" onclick="scrollTo('register')">プレミアムで始める</button>
-        </div>
-    </div>
-</section>
-
-<!-- ===== STATS ===== -->
-<section class="stats-section">
-    <div class="stats-grid fade-in">
-        <div><div class="stat-num">1,240+</div><div class="stat-lbl">登録人材</div></div>
-        <div><div class="stat-num">35+</div><div class="stat-lbl">対応競技種目</div></div>
-        <div><div class="stat-num">3,800+</div><div class="stat-lbl">マッチング成立</div></div>
-        <div><div class="stat-num">4.8</div><div class="stat-lbl">平均評価（5点満点）</div></div>
-    </div>
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-<section class="testimonials-section" id="testimonials">
-    <div class="section-header fade-in">
-        <div class="section-label"><i class="fas fa-star"></i> TESTIMONIALS</div>
-        <h2 class="section-title">利用者の声</h2>
-    </div>
-    <div class="testimonials-grid fade-in">
-        <div class="test-card">
-            <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="test-text">練習試合の審判確保にいつも苦労していましたが、スポーツ・部活相談サポートのおかげで3日前でも審判を手配できるようになりました。資格等級で選べるのも安心です。</p>
-            <div class="test-author">
-                <div class="test-avatar">佐</div>
-                <div><div class="test-name">佐藤 隆志</div><div class="test-role">中学校サッカー部 顧問</div></div>
-            </div>
-        </div>
-        <div class="test-card">
-            <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="test-text">元実業団の方にメンターとして指導していただき、娘のバレーボールの技術が飛躍的に向上しました。オンラインで動画を見てもらえるのも便利です。</p>
-            <div class="test-author">
-                <div class="test-avatar">田</div>
-                <div><div class="test-name">田中 美咲</div><div class="test-role">中学生バレーボール選手の母</div></div>
-            </div>
-        </div>
-        <div class="test-card">
-            <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="test-text">地域の少年野球大会で、審判3名とトレーナー1名をパッケージで手配しました。一括で依頼できて、セット割引もあり、運営がとても楽になりました。</p>
-            <div class="test-author">
-                <div class="test-avatar">鈴</div>
-                <div><div class="test-name">鈴木 一郎</div><div class="test-role">少年野球リーグ 運営委員長</div></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== REGISTER ===== -->
-<section class="register-section" id="register">
-    <div class="register-container">
-        <div class="section-header fade-in">
-            <div class="section-label"><i class="fas fa-user-plus"></i> REGISTER</div>
-            <h2 class="section-title">人材として登録する</h2>
-            <p class="section-sub">あなたの経験と資格を活かして、地域のスポーツに貢献しませんか？</p>
-        </div>
-        <div class="reg-tabs">
-            <button class="reg-tab active" onclick="switchRegTab(this,'reg-mentor')">メンター</button>
-            <button class="reg-tab" onclick="switchRegTab(this,'reg-referee')">審判</button>
-            <button class="reg-tab" onclick="switchRegTab(this,'reg-trainer')">トレーナー</button>
-        </div>
-
-        <div class="reg-form active" id="reg-mentor">
-            <div class="form-row">
-                <div class="form-group"><label>氏名 <span style="color:red">*</span></label><input type="text" placeholder="山田 太郎"></div>
-                <div class="form-group"><label>メールアドレス <span style="color:red">*</span></label><input type="email" placeholder="example@email.com"></div>
-            </div>
-            <div class="form-row">
-                <div class="form-group"><label>電話番号</label><input type="tel" placeholder="090-1234-5678"></div>
-                <div class="form-group">
-                    <label>居住地域 <span style="color:red">*</span></label>
-                    <select><option value="">選択してください</option><option>宮城県</option><option>北海道</option><option>青森県</option><option>岩手県</option><option>秋田県</option><option>山形県</option><option>福島県</option><option>東京都</option><option>その他</option></select>
+                <div class="sc-foot">
+                    <div class="sc-price">システム利用料 <strong>¥3,300〜</strong></div>
+                    <button class="btn-sc">詳細を見る</button>
                 </div>
             </div>
-            <div class="form-row full">
-                <div class="form-group">
-                    <label>対応可能な競技 <span style="color:red">*</span></label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label"><input type="checkbox"> サッカー</label>
-                        <label class="checkbox-label"><input type="checkbox"> 野球</label>
-                        <label class="checkbox-label"><input type="checkbox"> バスケットボール</label>
-                        <label class="checkbox-label"><input type="checkbox"> バレーボール</label>
-                        <label class="checkbox-label"><input type="checkbox"> テニス</label>
-                        <label class="checkbox-label"><input type="checkbox"> 陸上競技</label>
-                        <label class="checkbox-label"><input type="checkbox"> 水泳</label>
-                        <label class="checkbox-label"><input type="checkbox"> 柔道</label>
-                        <label class="checkbox-label"><input type="checkbox"> その他</label>
-                    </div>
+            <div class="service-card sc-referee">
+                <div class="sc-head">
+                    <div class="sc-icon"><i class="fas fa-whistle"></i></div>
+                    <h3>審判手配サポート</h3>
+                    <p>大会や練習試合の審判マッチング。資格保有者をシステムで即座に募ります。</p>
+                </div>
+                <div class="sc-body">
+                    <ul class="sc-features">
+                        <li><i class="fas fa-check"></i> 公式大会の審判員募集</li>
+                        <li><i class="fas fa-check"></i> 練習試合のジャッジ対応</li>
+                        <li><i class="fas fa-check"></i> 複数名の一括マッチング可能</li>
+                    </ul>
+                </div>
+                <div class="sc-foot">
+                    <div class="sc-price">システム利用料 <strong>¥5,500〜</strong></div>
+                    <button class="btn-sc">詳細を見る</button>
                 </div>
             </div>
-            <div class="form-row full">
-                <div class="form-group"><label>競技歴・指導歴 <span style="color:red">*</span></label><textarea placeholder="例：高校・大学でサッカー部に所属。大学卒業後、地元のクラブチームでコーチを5年間務める。JFA公認C級コーチライセンス保持。"></textarea></div>
-            </div>
-            <div class="form-row">
-                <div class="form-group"><label>希望報酬（1時間あたり）</label><select><option>3,000円</option><option>5,000円</option><option>8,000円</option><option>10,000円</option><option>応相談</option></select></div>
-                <div class="form-group"><label>オンライン対応</label><select><option>対面のみ</option><option>オンラインのみ</option><option>両方対応可</option></select></div>
-            </div>
-            <button class="btn-reg-submit" onclick="submitReg('メンター')"><i class="fas fa-paper-plane"></i> メンターとして登録申請</button>
-        </div>
-
-        <div class="reg-form" id="reg-referee">
-            <div class="form-row">
-                <div class="form-group"><label>氏名 <span style="color:red">*</span></label><input type="text" placeholder="山田 太郎"></div>
-                <div class="form-group"><label>メールアドレス <span style="color:red">*</span></label><input type="email" placeholder="example@email.com"></div>
-            </div>
-            <div class="form-row">
-                <div class="form-group"><label>審判対応競技 <span style="color:red">*</span></label><select><option value="">選択してください</option><option>サッカー</option><option>フットサル</option><option>野球</option><option>バスケットボール</option><option>バレーボール</option><option>テニス</option><option>ハンドボール</option><option>ラグビー</option><option>柔道</option><option>剣道</option></select></div>
-                <div class="form-group"><label>審判資格等級 <span style="color:red">*</span></label><select><option value="">選択してください</option><option>1級</option><option>2級</option><option>3級</option><option>4級</option><option>資格取得予定</option></select></div>
-            </div>
-            <div class="form-row">
-                <div class="form-group"><label>審判経験年数</label><select><option>1年未満</option><option>1〜3年</option><option>3〜5年</option><option>5〜10年</option><option>10年以上</option></select></div>
-                <div class="form-group"><label>居住地域 <span style="color:red">*</span></label><select><option value="">選択してください</option><option>宮城県</option><option>東北地方</option><option>関東地方</option><option>その他</option></select></div>
-            </div>
-            <div class="form-row full"><div class="form-group"><label>審判実績・PR</label><textarea placeholder="例：JFA公認3級審判員。県大会・地域リーグでの審判経験多数。主にサッカー・フットサルの審判を行っています。"></textarea></div></div>
-            <button class="btn-reg-submit" style="background:var(--referee-color);" onclick="submitReg('審判')"><i class="fas fa-paper-plane"></i> 審判として登録申請</button>
-        </div>
-
-        <div class="reg-form" id="reg-trainer">
-            <div class="form-row">
-                <div class="form-group"><label>氏名 <span style="color:red">*</span></label><input type="text" placeholder="山田 太郎"></div>
-                <div class="form-group"><label>メールアドレス <span style="color:red">*</span></label><input type="email" placeholder="example@email.com"></div>
-            </div>
-            <div class="form-row">
-                <div class="form-group"><label>専門分野 <span style="color:red">*</span></label><select><option value="">選択してください</option><option>アスレティックトレーナー</option><option>ストレングス&コンディショニング</option><option>理学療法・リハビリ</option><option>スポーツ栄養</option><option>メンタルトレーニング</option></select></div>
-                <div class="form-group">
-                    <label>保有資格 <span style="color:red">*</span></label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label"><input type="checkbox"> JSPO-AT</label>
-                        <label class="checkbox-label"><input type="checkbox"> 理学療法士</label>
-                        <label class="checkbox-label"><input type="checkbox"> 柔道整復師</label>
-                        <label class="checkbox-label"><input type="checkbox"> CSCS</label>
-                        <label class="checkbox-label"><input type="checkbox"> NSCA-CPT</label>
-                        <label class="checkbox-label"><input type="checkbox"> 管理栄養士</label>
-                        <label class="checkbox-label"><input type="checkbox"> その他</label>
-                    </div>
+            <div class="service-card sc-trainer">
+                <div class="sc-head">
+                    <div class="sc-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>訪問コンディショニング</h3>
+                    <p>選手のケガ予防やフィジカル管理。トレーナーが現場を訪問サポートします。</p>
+                </div>
+                <div class="sc-body">
+                    <ul class="sc-features">
+                        <li><i class="fas fa-check"></i> ストレッチ・体幹指導</li>
+                        <li><i class="fas fa-check"></i> ケガの応急処置サポート</li>
+                        <li><i class="fas fa-check"></i> 栄養・休養のアドバイス</li>
+                    </ul>
+                </div>
+                <div class="sc-foot">
+                    <div class="sc-price">システム利用料 <strong>¥4,400〜</strong></div>
+                    <button class="btn-sc">詳細を見る</button>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group"><label>経験年数</label><select><option>1年未満</option><option>1〜3年</option><option>3〜5年</option><option>5〜10年</option><option>10年以上</option></select></div>
-                <div class="form-group"><label>居住地域 <span style="color:red">*</span></label><select><option value="">選択してください</option><option>宮城県</option><option>東北地方</option><option>関東地方</option><option>その他</option></select></div>
+        </div>
+    </section>
+
+    <section class="search-section" id="search">
+        <div class="section-header">
+            <h2 class="section-title">サポーターを検索する</h2>
+            <p class="section-sub">お探しの職種・エリア・競技から、最適な人材をマッチングします。</p>
+        </div>
+        <div class="search-container">
+            <div class="search-tabs">
+                <button class="search-tab active" data-tab="mentor">指導者</button>
+                <button class="search-tab" data-tab="referee">審判員</button>
+                <button class="search-tab" data-tab="trainer">トレーナー</button>
             </div>
-            <div class="form-row full"><div class="form-group"><label>経歴・PR</label><textarea placeholder="例：大学院でスポーツ医学を専攻。卒業後、プロサッカーチームでアスレティックトレーナーとして3年間勤務。現在はフリーランスとして活動中。"></textarea></div></div>
-            <button class="btn-reg-submit" style="background:var(--trainer-color);" onclick="submitReg('トレーナー')"><i class="fas fa-paper-plane"></i> トレーナーとして登録申請</button>
-        </div>
-    </div>
-</section>
-
-<!-- ===== FAQ ===== -->
-<section class="faq-section" id="faq">
-    <div class="faq-container">
-        <div class="section-header fade-in">
-            <div class="section-label"><i class="fas fa-circle-question"></i> FAQ</div>
-            <h2 class="section-title">よくあるご質問</h2>
-        </div>
-        <div class="fade-in">
-            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">利用に費用はかかりますか？<i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-a-inner">人材を探して依頼する側（需要側）の方は、登録・検索は無料です。マッチング成立時に、サービス料金に加えてプラットフォーム手数料（10〜15%）がかかります。人材として登録する側（供給側）は、フリープランなら完全無料でご利用いただけます。</div></div></div>
-            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">審判やトレーナーの資格は確認されていますか？<i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-a-inner">はい、登録時に資格証明書のアップロードを必須としており、運営チームが目視で確認を行っています。確認済みの方には「認証バッジ」が表示されますので、安心して依頼いただけます。</div></div></div>
-            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">急ぎで審判やトレーナーが必要な場合、対応できますか？<i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-a-inner">最短で前日の依頼にも対応可能です（緊急料金が加算される場合があります）。大会パッケージをご契約いただいている場合は、代替人材の手配を優先的に行います。</div></div></div>
-            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">大会で審判とトレーナーを同時に手配したいのですが？<i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-a-inner">「大会サポートパッケージ」をご利用ください。審判とトレーナーをまとめて手配でき、セット割引（最大20%OFF）が適用されます。専属のコーディネーターが対応しますので、大会運営に集中していただけます。</div></div></div>
-            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">キャンセルした場合の返金はどうなりますか？<i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-a-inner">派遣4日前までのキャンセルは全額返金（手数料除く）となります。3日前〜前日は50%、当日キャンセルは返金不可となります。天候不良等やむを得ない理由の場合は、別途ご相談に応じます。</div></div></div>
-            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">学校・教育委員会として導入したいのですが？<i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-a-inner">法人・自治体向けの専用プランをご用意しています。請求書払い・年間契約・専属担当など、組織のニーズに合わせて柔軟に対応いたします。まずはお問い合わせフォームよりご連絡ください。</div></div></div>
-        </div>
-    </div>
-</section>
-
-
-<!-- ===== CONTACT ===== -->
-<section class="register-section" id="contact" style="background:#fff;">
-    <div class="register-container">
-        <div class="section-header fade-in">
-            <div class="section-label"><i class="fas fa-envelope"></i> CONTACT</div>
-            <h2 class="section-title">お問い合わせ</h2>
-            <p class="section-sub">ご質問・ご依頼・法人向けのご相談など、お気軽にお問い合わせください</p>
-        </div>
-
-        <div class="reg-form active" id="contactFormWrap" style="display:block;">
-            <div class="form-row">
-                <div class="form-group"><label>お名前 <span style="color:red">*</span></label><input type="text" id="c_name" placeholder="山田 太郎"></div>
-                <div class="form-group"><label>メールアドレス <span style="color:red">*</span></label><input type="email" id="c_email" placeholder="example@email.com"></div>
-            </div>
-            <div class="form-row">
-                <div class="form-group"><label>電話番号</label><input type="tel" id="c_phone" placeholder="090-1234-5678"></div>
-                <div class="form-group">
-                    <label>お問い合わせ種別 <span style="color:red">*</span></label>
-                    <select id="c_type">
-                        <option value="">選択してください</option>
-                        <option>メンターマッチングについて</option>
-                        <option>審判派遣について</option>
-                        <option>トレーナー派遣について</option>
-                        <option>大会サポートパッケージについて</option>
-                        <option>法人・自治体での導入について</option>
-                        <option>人材として登録したい</option>
-                        <option>料金について</option>
-                        <option>その他</option>
-                    </select>
+            <div class="search-panel active" data-panel="mentor">
+                <div class="search-form">
+                    <div class="form-group"><label>競技種目</label><select><option>サッカー</option><option>野球</option><option>バスケ</option></select></div>
+                    <div class="form-group"><label>活動エリア</label><select><option>東京都</option><option>神奈川県</option><option>埼玉県</option></select></div>
+                    <div class="form-group"><label>訪問形態</label><select><option>定期指導</option><option>単発・スポット</option></select></div>
+                    <button class="btn-search"><i class="fas fa-search"></i> マッチングを開始する</button>
                 </div>
             </div>
-            <div class="form-row full">
-                <div class="form-group"><label>お問い合わせ内容 <span style="color:red">*</span></label><textarea id="c_msg" style="min-height:120px;" placeholder="お問い合わせ内容をご記入ください"></textarea></div>
+        </div>
+    </section>
+
+    <section class="how-section" id="how">
+        <div class="section-header">
+            <h2 class="section-title">ご利用の流れ</h2>
+            <p class="section-sub">システムを通じて、どなたでも簡単にサポーターを募ることができます。</p>
+        </div>
+        <div class="how-content active">
+            <div class="how-steps">
+                <div class="how-step">
+                    <div class="step-num">1</div>
+                    <h4>募集情報の登録</h4>
+                    <p>希望条件を登録し、サポーターを公募します。</p>
+                </div>
+                <div class="how-step">
+                    <div class="step-num">2</div>
+                    <h4>マッチング</h4>
+                    <p>立候補したサポーターとシステム上で連絡調整します。</p>
+                </div>
+                <div class="how-step">
+                    <div class="step-num">3</div>
+                    <h4>活動スタート</h4>
+                    <p>条件が合意できれば、現場でのサポートが始まります。</p>
+                </div>
             </div>
-            <button class="btn-reg-submit" id="c_btn" onclick="sendContact()">
-                <i class="fas fa-paper-plane"></i> 送信する
-            </button>
-            <p style="text-align:center;font-size:12px;color:var(--gray-600);margin-top:10px;">通常2営業日以内にご返信いたします</p>
         </div>
+    </section>
 
-        <div id="contactDone" style="display:none;text-align:center;padding:60px 20px;">
-            <i class="fas fa-check-circle" style="font-size:60px;color:#00c853;margin-bottom:18px;display:block;"></i>
-            <h3 style="font-size:22px;font-weight:900;margin-bottom:10px;">送信完了しました</h3>
-            <p style="color:var(--gray-600);">お問い合わせありがとうございます。<br>2営業日以内にご連絡いたします。</p>
-        </div>
-    </div>
-</section>
-
-<!-- ===== CTA ===== -->
-<section class="cta-section">
-    <div class="fade-in">
-        <h2>地域スポーツの未来を、一緒につくりませんか？</h2>
-        <p>メンター・審判・トレーナーとして登録するもよし、必要な人材を探すもよし。まずは無料登録から始めましょう。</p>
+    <section class="cta-section">
+        <h2>現場の「困った」を今すぐ解消</h2>
+        <p>忙しい先生や監督に代わって、システムが最適な人材との出会いをサポートします。</p>
         <div class="cta-btns">
-            <button class="btn-hero btn-primary-hero" onclick="scrollTo('register')"><i class="fas fa-user-plus"></i>無料で登録する</button>
-            <button class="btn-hero btn-secondary-hero" onclick="scrollTo('search')"><i class="fas fa-search"></i>人材を探す</button>
+            <a href="#" class="btn-hero btn-primary-hero">無料で利用登録する</a>
+            <a href="#" class="btn-hero btn-secondary-hero">相談してみる</a>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-    <div class="footer-grid">
-        <div class="footer-brand">
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="logo-icon" style="width:38px;height:38px;font-size:12px;background:linear-gradient(135deg,#1a73e8,#ff6b35);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;">部サポ</div>
-                <div>
-                    <div style="font-size:14px;font-weight:700;color:#fff;line-height:1.2;">スポーツ・部活相談サポート</div>
-                    <div style="font-size:10px;color:rgba(255,255,255,0.5);">スポーツ人材マッチング</div>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon" style="background:#fff; color:var(--primary);">SP</div>
+                    <div style="color:#fff;">スポーツ・部活相談サポート</div>
                 </div>
+                <p>個人事業主として運営するスポーツ人材マッチングプラットフォーム。現場主体の持続可能な未来をITで支えます。</p>
             </div>
-            <p>メンター・審判・トレーナー — スポーツに関わる人材をワンストップでマッチングするプラットフォームです。部活動の地域移行を支援し、地域スポーツの未来を創ります。</p>
-            <div class="footer-contact" style="margin-top:12px;">
-                <div style="margin-bottom:4px;"><i class="fas fa-envelope" style="margin-right:6px;"></i><a href="mailto:sports.bukatsu.soudan.@gmail.com">sports.bukatsu.soudan.@gmail.com</a></div>
-                <div style="font-size:11px;color:rgba(255,255,255,0.4);">責任者：請求時開示 ／ 住所・電話：取得次第掲載予定</div>
+            <div>
+                <h4>サービス</h4>
+                <ul class="footer-links">
+                    <li><a href="#">指導者マッチング</a></li>
+                    <li><a href="#">審判手配システム</a></li>
+                    <li><a href="#">トレーナー支援</a></li>
+                </ul>
             </div>
-        </div>
-        <div>
-            <h4>サービス</h4>
-            <ul class="footer-links">
-                <li><a href="#">メンターマッチング</a></li>
-                <li><a href="#">審判派遣</a></li>
-                <li><a href="#">トレーナー派遣</a></li>
-                <li><a href="#">大会パッケージ</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4>ご利用ガイド</h4>
-            <ul class="footer-links">
-                <li><a href="#">初めての方へ</a></li>
-                <li><a href="#">料金について</a></li>
-                <li><a href="#">ご利用の流れ</a></li>
-                <li><a href="#" onclick="scrollTo('faq')">よくある質問</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4>運営情報</h4>
-            <ul class="footer-links">
-                <li><a href="legal.html">特定商取引法に基づく表記</a></li>
-                <li><a href="terms.html">利用規約</a></li>
-                <li><a href="privacy.html">プライバシーポリシー</a></li>
-                <li><a href="#" onclick="scrollTo('contact')">お問い合わせ</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <span>© 2026 スポーツ・部活相談サポート All rights reserved.</span>
-        <div class="footer-social">
-            <a href="#" title="X(Twitter)"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" title="LINE"><i class="fab fa-line"></i></a>
-        </div>
-    </div>
-</footer>
-
-<!-- ===== MODAL ===== -->
-<div class="modal-overlay" id="modal">
-    <div class="modal">
-        <div class="modal-header">
-            <h3 id="modalTitle">人材詳細</h3>
-            <button class="modal-close" onclick="closeModal()"><i class="fas fa-xmark"></i></button>
-        </div>
-        <div class="modal-body" id="modalBody"></div>
-        <div class="modal-footer">
-            <button class="btn-modal btn-modal-s" onclick="closeModal()">閉じる</button>
-            <button class="btn-modal btn-modal-p" onclick="showToast('依頼リクエストを送信しました！');closeModal();">
-                <i class="fas fa-paper-plane"></i> この人材に依頼する
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- ===== TOAST ===== -->
-<div class="toast success" id="toast">
-    <i class="fas fa-check-circle"></i>
-    <span id="toastMsg"></span>
-</div>
-
-<script>
-// ===== SAMPLE DATA =====
-const sampleData = {
-    mentor: [
-        { name:"高橋 健太", type:"mentor", sports:["サッカー","フットサル"], area:"宮城県仙台市", price:"¥5,000/時間", rating:4.9, reviews:48, desc:"元Jリーグ選手。現在はJFA公認B級コーチとして、中高生を中心に技術指導とメンタルサポートを行っています。個々の特性に合わせた丁寧な指導が強みです。", exp:"プロ経験12年 / 指導歴8年", qual:"JFA公認B級コーチ / JFA公認4級審判員", avail:"土日 / 平日夜" },
-        { name:"山本 愛子", type:"mentor", sports:["バレーボール"], area:"宮城県名取市", price:"¥3,000/時間", rating:4.8, reviews:32, desc:"元実業団バレーボール選手。V.LEAGUEで5年間プレー。引退後は地域のジュニアクラブで指導を行いながら、個人レッスンも実施中。", exp:"選手経験10年 / 指導歴6年", qual:"日本バレーボール協会公認指導者", avail:"平日午前 / 土曜" },
-        { name:"伊藤 翔太", type:"mentor", sports:["野球"], area:"宮城県石巻市", price:"¥4,000/時間", rating:4.7, reviews:25, desc:"大学野球で全国大会出場経験あり。ピッチングに特化した指導に定評があります。動画分析を活用したオンライン指導も対応可能。", exp:"選手経験14年 / 指導歴5年", qual:"BFJ公認野球指導者 基礎I", avail:"土日 / オンラインは随時" },
-        { name:"渡辺 結衣", type:"mentor", sports:["テニス","バドミントン"], area:"宮城県仙台市", price:"¥3,500/時間", rating:4.9, reviews:41, desc:"全日本ジュニアテニス出場経験あり。ジュニアからシニアまで幅広い年齢層に対応。楽しみながら上達できるレッスンが好評。", exp:"選手経験16年 / 指導歴7年", qual:"日本テニス協会公認コーチ2", avail:"火水木 / 土日午前" }
-    ],
-    referee: [
-        { name:"菅原 誠", type:"referee", sports:["サッカー","フットサル"], area:"宮城県仙台市", price:"¥8,000/半日", rating:4.9, reviews:67, desc:"JFA公認2級審判員。県リーグ・地域大会を中心に年間80試合以上を担当。正確なジャッジと円滑な試合運営に定評があります。", exp:"審判歴15年 / 年間80試合以上", qual:"JFA公認2級審判員", avail:"土日祝 / 平日応相談" },
-        { name:"小林 裕介", type:"referee", sports:["野球"], area:"宮城県大崎市", price:"¥6,000/半日", rating:4.7, reviews:34, desc:"全日本軟式野球連盟公認審判員。少年野球から一般の大会まで幅広く対応。丁寧なルール説明を心がけ、フェアプレーの精神を大切にしています。", exp:"審判歴10年", qual:"全日本軟式野球連盟公認審判員", avail:"土日祝" },
-        { name:"阿部 陽子", type:"referee", sports:["バスケットボール"], area:"宮城県仙台市", price:"¥7,000/半日", rating:4.8, reviews:29, desc:"JBA公認E級審判員。大学時代からバスケットボールの審判を続け、県大会・地域リーグを中心に活動中。", exp:"審判歴8年", qual:"JBA公認E級審判員", avail:"土日 / 祝日" },
-        { name:"佐々木 大輔", type:"referee", sports:["バレーボール"], area:"宮城県多賀城市", price:"¥5,000/半日", rating:4.6, reviews:18, desc:"日本バレーボール協会公認C級審判員。中学校の練習試合から地域の大会まで幅広く対応します。", exp:"審判歴4年", qual:"日本バレーボール協会公認C級審判員", avail:"土日" }
-    ],
-    trainer: [
-        { name:"中村 健一", type:"trainer", sports:["全競技対応"], area:"宮城県仙台市", price:"¥15,000/半日", rating:5.0, reviews:52, desc:"JSPO公認アスレティックトレーナー。元プロサッカーチームのメディカルスタッフ。ケガの予防・応急処置・リハビリまでトータルにサポートします。", exp:"トレーナー歴12年 / プロチーム経験あり", qual:"JSPO-AT / 理学療法士", avail:"応相談（週3日程度対応可能）" },
-        { name:"加藤 真由美", type:"trainer", sports:["球技全般"], area:"宮城県仙台市", price:"¥12,000/半日", rating:4.9, reviews:38, desc:"柔道整復師・NSCA-CPT取得。高校・大学アスリートのフィジカル強化と障害予防が専門。女性アスリートへの対応も得意です。", exp:"トレーナー歴8年", qual:"柔道整復師 / NSCA-CPT", avail:"平日・土日（要事前予約）" },
-        { name:"松田 浩二", type:"trainer", sports:["陸上・球技"], area:"宮城県名取市", price:"¥10,000/半日", rating:4.8, reviews:27, desc:"CSCS取得のストレングス&コンディショニングコーチ。ジュニアからシニアまでのフィジカル強化プログラムを提供します。", exp:"トレーナー歴6年", qual:"CSCS / 日本スポーツ協会公認AT", avail:"土日・祝日" },
-        { name:"今野 涼", type:"trainer", sports:["水泳・陸上・球技"], area:"宮城県仙台市", price:"¥11,000/半日", rating:4.7, reviews:21, desc:"管理栄養士としてスポーツ栄養を専門に活動。アスリートの食事管理・栄養指導から体重管理まで幅広く対応。オンライン相談も対応可。", exp:"栄養指導歴7年", qual:"管理栄養士 / スポーツ栄養士", avail:"平日・土曜 / オンライン随時" }
-    ]
-};
-
-// ===== SCROLL =====
-function scrollTo(id) {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
-}
-
-// ===== HEADER SCROLL =====
-window.addEventListener('scroll', () => {
-    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
-});
-
-// ===== MOBILE NAV =====
-function toggleMobileNav() {
-    document.getElementById('mobileNav').classList.toggle('active');
-}
-
-// ===== PARTICLES =====
-(function() {
-    const container = document.getElementById('particles');
-    for (let i = 0; i < 30; i++) {
-        const p = document.createElement('div');
-        p.className = 'particle';
-        p.style.left = Math.random() * 100 + '%';
-        p.style.top = Math.random() * 100 + '%';
-        p.style.animationDuration = (8 + Math.random() * 12) + 's';
-        p.style.animationDelay = (Math.random() * 8) + 's';
-        p.style.width = p.style.height = (2 + Math.random() * 3) + 'px';
-        container.appendChild(p);
-    }
-})();
-
-// ===== COUNTER =====
-function countUp(el, target, suffix, decimals) {
-    const dur = 2000, step = 30;
-    let current = 0, count = 0, steps = dur / step;
-    const timer = setInterval(() => {
-        count++;
-        current = target * (count / steps);
-        if (count >= steps) { current = target; clearInterval(timer); }
-        el.textContent = decimals ? current.toFixed(1) + suffix : Math.floor(current).toLocaleString() + suffix;
-    }, step);
-}
-
-// ===== SCROLL ANIMATIONS =====
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-
-        }
-    });
-}, { threshold: 0.15 });
-
-document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-
-// カウントアップはページロード後に直接実行
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        countUp(document.getElementById("stat1"), 1240, "+", false);
-        countUp(document.getElementById("stat2"), 35, "+", false);
-        countUp(document.getElementById("stat3"), 3800, "+", false);
-        countUp(document.getElementById("stat4"), 4.8, "", true);
-    }, 800);
-});
-
-// ===== SEARCH TAB =====
-function switchSearchTab(type) {
-    document.querySelectorAll('.search-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.search-panel').forEach(p => p.classList.remove('active'));
-    document.querySelector(`.search-tab[data-tab="${type}"]`).classList.add('active');
-    document.querySelector(`.search-panel[data-panel="${type}"]`).classList.add('active');
-    document.getElementById('results').classList.remove('active');
-}
-
-// ===== SEARCH =====
-function performSearch(type) {
-    const data = sampleData[type];
-    const grid = document.getElementById('resultsGrid');
-    const section = document.getElementById('results');
-    document.getElementById('resultsCount').textContent = data.length;
-    grid.innerHTML = '';
-    data.forEach((p, i) => {
-        const icons = ['👤','👤','👤','👤'];
-        const badgeClass = `badge-${p.type}`;
-        const typeLabel = p.type === 'mentor' ? 'メンター' : p.type === 'referee' ? '審判' : 'トレーナー';
-        const stars = '★'.repeat(Math.round(p.rating));
-        grid.innerHTML += `
-        <div class="result-card" style="animation-delay:${i*0.08}s">
-            <div class="rc-top">
-                <div class="rc-avatar"><i class="fas fa-user"></i></div>
-                <div class="rc-info">
-                    <div class="rc-name">${p.name}</div>
-                    <span class="rc-badge ${badgeClass}">${typeLabel}</span>
-                    <span class="rc-badge badge-verified"><i class="fas fa-check"></i> 認証済み</span>
-                    <div class="rc-meta">
-                        <span><i class="fas fa-map-marker-alt"></i>${p.area}</span>
-                        <span><i class="fas fa-clock"></i>${p.avail ? p.avail.split('/')[0].trim() : '応相談'}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="rc-body">
-                <div class="rc-sports">${p.sports.map(s=>`<span class="sport-tag">${s}</span>`).join('')}</div>
-                <div class="rc-desc">${p.desc}</div>
-            </div>
-            <div class="rc-foot">
-                <div>
-                    <div class="rc-price"><strong>${p.price}</strong></div>
-                    <div class="rc-rating">${stars} <span>${p.rating}</span> (${p.reviews}件)</div>
-                </div>
-                <button class="btn-detail" onclick="openModal(${i},'${type}')">詳細を見る</button>
-            </div>
-        </div>`;
-    });
-    section.classList.add('active');
-    section.scrollIntoView({ behavior:'smooth', block:'start' });
-}
-
-// ===== MODAL =====
-function openModal(idx, type) {
-    const p = sampleData[type][idx];
-    document.getElementById('modalTitle').textContent = p.name + ' さんの詳細';
-    const typeLabel = type === 'mentor' ? 'メンター' : type === 'referee' ? '審判' : 'トレーナー';
-    document.getElementById('modalBody').innerHTML = `
-        <div class="modal-profile">
-            <div class="modal-avatar"><i class="fas fa-user"></i></div>
-            <div class="modal-info">
-                <h4>${p.name}</h4>
-                <span class="rc-badge badge-${type}">${typeLabel}</span>
-                <span class="rc-badge badge-verified"><i class="fas fa-check"></i> 認証済み</span>
-                <div class="rc-meta" style="margin-top:10px;">
-                    <span><i class="fas fa-map-marker-alt"></i>${p.area}</span>
-                    <div class="rc-rating" style="margin-left:8px;">★ ${p.rating} (${p.reviews}件)</div>
-                </div>
-                <div style="margin-top:10px;">${p.sports.map(s=>`<span class="sport-tag">${s}</span>`).join(' ')}</div>
+            <div>
+                <h4>安心・安全への取り組み</h4>
+                <ul class="footer-links">
+                    <li><a href="#">プラットフォーム利用規約</a></li>
+                    <li><a href="#">特定商取引法に基づく表記</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                </ul>
             </div>
         </div>
-        <div class="modal-dg">
-            <div class="modal-di"><div class="lbl">料金</div><div class="val">${p.price}</div></div>
-            <div class="modal-di"><div class="lbl">経験</div><div class="val" style="font-size:12px;">${p.exp}</div></div>
-            <div class="modal-di"><div class="lbl">資格・免許</div><div class="val" style="font-size:12px;">${p.qual}</div></div>
-            <div class="modal-di"><div class="lbl">対応可能日</div><div class="val" style="font-size:12px;">${p.avail}</div></div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sports Support Matching. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-        <p style="font-size:13px;color:var(--gray-600);line-height:1.8;">${p.desc}</p>`;
-    document.getElementById('modal').classList.add('active');
-}
-function closeModal() { document.getElementById('modal').classList.remove('active'); }
-document.getElementById('modal').addEventListener('click', e => { if(e.target===e.currentTarget) closeModal(); });
+    </footer>
 
-// ===== HOW TABS =====
-function switchHowTab(btn, id) {
-    document.querySelectorAll('.how-tab').forEach(t=>t.classList.remove('active'));
-    document.querySelectorAll('.how-content').forEach(c=>c.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(id).classList.add('active');
-}
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
 
-// ===== PACKAGE CALC =====
-function calcPackage() {
-    const refs = parseInt(document.getElementById('calcRef').value)||0;
-    const tras = parseInt(document.getElementById('calcTra').value)||0;
-    const mult = parseInt(document.getElementById('calcHrs').value)||1;
-    const refPrice = 5000, traPrice = 10000, discount = 0.8;
-    const base = (refs * refPrice + tras * traPrice) * mult;
-    const total = (refs > 0 && tras > 0) ? Math.round(base * discount) : base;
-    document.getElementById('calcTotal').textContent = '¥' + (total * 1.1).toLocaleString();
-}
-calcPackage();
-
-// ===== REGISTER TABS =====
-function switchRegTab(btn, id) {
-    document.querySelectorAll('.reg-tab').forEach(t=>t.classList.remove('active'));
-    document.querySelectorAll('.reg-form').forEach(f=>f.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(id).classList.add('active');
-}
-
-// ===== SUBMIT =====
-function submitReg(type) {
-    showToast(`${type}として登録申請を受け付けました！審査後にご連絡いたします。`);
-}
-
-// ===== FAQ =====
-function toggleFaq(btn) {
-    const item = btn.parentElement;
-    const answer = item.querySelector('.faq-a');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-a').style.maxHeight = '0';
-    });
-    if (!isOpen) {
-        item.classList.add('open');
-        answer.style.maxHeight = answer.querySelector('.faq-a-inner').scrollHeight + 'px';
-    }
-}
-
-// ===== TOAST =====
-function showToast(msg) {
-    const t = document.getElementById('toast');
-    document.getElementById('toastMsg').textContent = msg;
-    t.classList.add('show');
-    setTimeout(()=>t.classList.remove('show'), 3500);
-}
-</script>
-
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-// ========== EMAILJS設定 ==========
-// 以下3つの値をEmailJS(https://www.emailjs.com)で取得した値に変更してください
-const EMAILJS_PUBLIC_KEY  = "Ec4dkdUV5P4aUrf1t";   // Account > API Keys
-const EMAILJS_SERVICE_ID  = "service_jln7gjq";   // Email Services の Service ID
-const EMAILJS_TEMPLATE_ID = "template_tpmimq3";  // Email Templates の Template ID
-
-(function(){
-    if (EMAILJS_PUBLIC_KEY) {
-        emailjs.init(EMAILJS_PUBLIC_KEY);
-    }
-})();
-
-function sendContact() {
-    const name  = document.getElementById('c_name').value.trim();
-    const email = document.getElementById('c_email').value.trim();
-    const phone = document.getElementById('c_phone').value.trim();
-    const type  = document.getElementById('c_type').value;
-    const msg   = document.getElementById('c_msg').value.trim();
-    const btn   = document.getElementById('c_btn');
-
-    if (!name || !email || !type || !msg) {
-        showToast('必須項目をすべて入力してください');
-        return;
-    }
-
-    // EmailJS未設定の場合はメール直接リンクにフォールバック
-    if (!EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
-        const subject = encodeURIComponent('【お問い合わせ】' + type + ' - ' + name + '様');
-        const body = encodeURIComponent('お名前: ' + name + '\nメール: ' + email + '\n電話: ' + (phone||'未入力') + '\n種別: ' + type + '\n\n' + msg);
-        window.location.href = 'mailto:sports.bukatsu.soudan.@gmail.com?subject=' + subject + '&body=' + body;
-        return;
-    }
-
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
-
-    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        name:         name,
-        from_name:    name,
-        email:        email,
-        reply_to:     email,
-        phone:        phone || '未入力',
-        title:        type,
-        inquiry_type: type,
-        message:      '[種別] ' + type + '\n[電話] ' + (phone || '未入力') + '\n\n' + msg,
-        time:         new Date().toLocaleString('ja-JP')
-    }).then(function() {
-        document.getElementById('contactFormWrap').style.display = 'none';
-        document.getElementById('contactDone').style.display = 'block';
-        showToast('お問い合わせを送信しました！');
-    }).catch(function(err) {
-        console.error(err);
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i> 送信する';
-        showToast('送信に失敗しました。時間をおいて再度お試しください。');
-    });
-}
-</script>
-
+        // Simple Tab Switcher
+        const tabs = document.querySelectorAll('.search-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
